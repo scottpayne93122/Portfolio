@@ -1,0 +1,332 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	margin: 0px;
+}
+
+section {
+	background-color: white;
+}
+
+.hero {
+	background-color: #1c1d25;
+	height: 100vh;
+	width: 100vw;
+	color: white;
+	font-size: 40px;
+}
+
+footer {
+	padding: 80px;
+	background-color: black;
+	color: white;
+	text-align: center;
+}
+
+input {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	height: 250px;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+.logo {
+	height: 50px;
+	margin: 20px;
+}
+
+ul {
+	display: flex;
+	list-style-type: none;
+	width: 500px;
+	justify-content: space-around;
+	font-size: 30px;
+}
+
+li {
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 90px;
+	margin: 0;
+}
+
+h2 {
+	font-size: 50px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+p {
+	margin: 0;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+.subtext {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.hero-area {
+	display: flex;
+	height: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hero-text {
+	margin-left: 80px;
+	margin-bottom: 200px;
+}
+
+.button {
+	width: 200px;
+	height: 55px;
+	border-radius: 30px;
+	background-color: coral;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 300;
+	padding-top: 5px;
+	margin-top: 20px;
+}
+
+.button:hover {
+	background-color: #ef744b;
+}
+
+.button:active {
+	background-color: #a9a9a9;
+	color: #808080;
+}
+
+.socials {
+	padding-bottom: 200px;
+}
+
+.social {
+	margin: 20px;
+}
+
+.sub-section {
+	display: flex;
+	justify-content: space-around;
+	padding: 80px;
+	margin: 20px;
+}
+
+.sub-section-alternative {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding: 60px;
+}
+
+.sub-section-skills {
+	padding: 50px;
+}
+
+.headshot {
+	width: 300px;
+	border-radius: 150px;
+	margin-left: 80px;
+}
+
+.headshot-container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.project-card {
+	width: 350px;
+	height: 500px;
+	box-shadow: 5px 5px 20px rgb(210, 202, 202);
+	padding: 20px;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 20px;
+}
+
+.project-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+@media only screen and (max-width: 1400px) {
+	.project-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.project-image {
+	margin-top: 25px;
+	width: 300px;
+	border-radius: 20px;
+}
+
+.project-buttons {
+	width: fit-content;
+	height: fit-content;
+	border-radius: 10px;
+	background-color: coral;
+	text-align: center;
+	font-size: inherit;
+	font-weight: 500;
+	padding: 15px;
+	margin-top: 5px;
+	color: white;
+	border: transparent;
+}
+
+.project-buttons:hover {
+	background-color: #ef744b;
+}
+
+.project-buttons:active {
+	background-color: #a9a9a9;
+	color: #808080;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.hamburger {
+	display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+	.hamburger {
+		display: block;
+		background-color: transparent;
+		border: 0;
+		align-self: flex-end;
+		margin: 20px;
+		font-size: 50px;
+	}
+
+	ul {
+		display: none;
+		background-color: #32333f;
+		margin: 0px;
+	}
+
+	ul.show {
+		display: block;
+	}
+
+	nav {
+		display: flex;
+		flex-direction: column-reverse;
+		background-color: #32333f;
+	}
+
+	.logo {
+		display: none;
+	}
+}
+
+.code-snippet-section {
+	padding: 20px;
+	margin: 20px;
+}
+
+.container {
+	width: 1000px;
+	overflow-x: auto;
+}
+
+.language {
+	color: white;
+	background-color: #ef744b;
+	padding: 12px 16px;
+	border-radius: 5px 5px 0 0;
+	text-align: right;
+	font-size: medium;
+}
+
+.code-wrapper {
+	position: relative;
+}
+
+.code-wrapper pre {
+	background-color: gray;
+	color: black;
+	padding: 8px 20px;
+	border-radius: 0 0 5px 5px;
+}
+
+#copy-button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	padding: 7px;
+	background-color: #ef744b;
+	border: none;
+	outline: none;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.2s ease-in;
+	opacity: 0;
+}
+
+#copy-button:hover {
+	background-color: #ef744b9c;
+}
+
+.code-wrapper:hover #copy-button {
+	opacity: 1;
+}
+
+#copy-success {
+	/* position: absolute; */
+	bottom: 12px;
+	left: 50%;
+	/* transform: translateX(-50%); */
+	background-color: #ef744b;
+	color: white;
+	padding: 16px 32px;
+	font-size: small;
+	border-radius: 5px;
+	display: none;
+}
+
+#copy-success.show-message {
+	display: inline-block;
+}
+
+.hljs {
+	background-color: transparent;
+}
+
+.explainer-text {
+	font-size: large;
+}
