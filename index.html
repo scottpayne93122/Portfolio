@@ -105,62 +105,6 @@
           </div>
         </section>
 
-        <section class="code-snippet-section">
-            <h2>Code Snippets</h2>
-            <p>
-                Here are code snippets that I find useful. The main idea is for me to use as a quick reference but maybe someone else will find it useful as well. 
-            </p>
-            <br />
-            <h3>Using a struct inside a mapping</h3>
-            <div class="container">
-                <p class="language">Solidity</p>
-                <div class="code-wrapper">
-                  <pre> 
-                    <code id="code" class="solidity">
-mapping(uint256 => _Order) public orders;
-uint256 public orderCount;
-
-struct _Order {
-    uint256 id;
-    address user;
-    address tokenGet;
-    uint amountGet;
-    address tokenGive;
-    uint amountGive;
-    uint timestamp;
-}
-                    </code>
-                </pre>
-                <button id="copy-button">Copy</button>
-                </div>
-              <span id="copy-success">Code copied!</span>
-              <br />
-              <p class="explainer-text">
-                  Here's an example of storing order information on an exchange using a struct. Take note of how structs use the naming convention <code>_Order</code>. This is useful when we want to store multiple values to the blockchain under a single key. I can now use this later when making, filling and cancelling orders. 
-              </p> 
-            </div>
-            <br />
-            <div class="container">
-                <p class="language">Solidity</p>
-                <div class="code-wrapper">
-                  <pre> 
-                    <code id="code" class="solidity">
-function makeOrder(address _tokenGet, uint256 _amountGet, address _tokenGive, uint256 _amountGive) public {
-  orderCount = orderCount.add(1);
-  orders[orderCount] = _Order(orderCount, msg.sender, _tokenGet, _amountGet, _tokenGive, _amountGive, now);
-  emit Order(orderCount, msg.sender, _tokenGet, _amountGet, _tokenGive, _amountGive, now);
-}
-                    </code>
-                </pre>
-                <button id="copy-button">Copy</button>
-                </div>
-              <span id="copy-success">Code copied!</span>
-              <br />
-              <p class="explainer-text">
-                  Notice how <code>orderCount</code> is created and takes place of <code>id</code> inside the  <code>_Order</code> struct. <code>orderCount</code> is a state variable (see snippet above).
-              </p> 
-            </div>
-        </section>
 
         <footer id="contact">
             <h2>Contact me</h2>
